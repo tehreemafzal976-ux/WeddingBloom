@@ -121,8 +121,8 @@ function Register() {
         description: formData.description,
       };
 
-      const primaryUrl = (import.meta.env.VITE_API_URL || "http://localhost:5000/api") + "/auth/register";
-      const fallbackUrl = "https://weddingbloomai-production.up.railway.app/api/auth/register";
+      const primaryUrl = (import.meta.env.VITE_API_URL || "https://weddingbloom-production-b2a2.up.railway.app/api") + "/auth/register";
+      const fallbackUrl = "https://weddingbloom-production-b2a2.up.railway.app/api/auth/register";
 
       let response;
       try {

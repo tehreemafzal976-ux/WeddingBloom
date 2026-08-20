@@ -4,7 +4,7 @@ const getApiUrl = () => {
     return import.meta.env.VITE_API_URL;
   }
   // Fallback to local server or Railway production URL if available
-  return "http://localhost:5000/api";
+  return "https://weddingbloom-production-b2a2.up.railway.app/api";
 };
 
 export const API_URL = getApiUrl();

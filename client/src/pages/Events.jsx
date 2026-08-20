@@ -43,7 +43,7 @@ function Events() {
   const fetchWeddings = async () => {
     try {
       const response = await fetch(
-        "https://weddingbloomai-production.up.railway.app/api/weddings/my",
+        "https://weddingbloom-production-b2a2.up.railway.app/api/weddings/my",
         {
           method: "GET",
           headers: {
@@ -90,7 +90,7 @@ function Events() {
       setLoading(true);
 
       const response = await fetch(
-        `https://weddingbloomai-production.up.railway.app/api/events/wedding/${weddingId}`,
+        `https://weddingbloom-production-b2a2.up.railway.app/api/events/wedding/${weddingId}`,
         {
           method: "GET",
           headers: {
@@ -171,7 +171,7 @@ function Events() {
       setSaving(true);
 
       const response = await fetch(
-        "https://weddingbloomai-production.up.railway.app/api/events",
+        "https://weddingbloom-production-b2a2.up.railway.app/api/events",
         {
           method: "POST",
 

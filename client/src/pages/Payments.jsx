@@ -53,7 +53,7 @@ function Payments() {
   // API URL
   // =========================
 
-  const API_URL = "https://weddingbloomai-production.up.railway.app/api";
+  const API_URL = "https://weddingbloom-production-b2a2.up.railway.app/api";
 
   // =========================
   // FETCH PAYMENTS

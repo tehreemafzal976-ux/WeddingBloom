@@ -20,7 +20,7 @@ function Notifications() {
   const [search, setSearch] = useState("");
   const [loading, setLoading] = useState(true);
 
-  const API_URL = "https://weddingbloomai-production.up.railway.app/api/notifications";
+  const API_URL = "https://weddingbloom-production-b2a2.up.railway.app/api/notifications";
 
   /* =========================
      FETCH NOTIFICATIONS

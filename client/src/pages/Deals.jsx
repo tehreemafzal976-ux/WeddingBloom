@@ -17,7 +17,7 @@ import "./Deals.css";
 
 function Deals() {
 
-  const API_URL = "https://weddingbloomai-production.up.railway.app/api";
+  const API_URL = "https://weddingbloom-production-b2a2.up.railway.app/api";
 
   const [showForm, setShowForm] = useState(false);
 

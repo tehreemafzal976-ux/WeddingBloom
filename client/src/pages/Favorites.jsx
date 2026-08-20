@@ -11,7 +11,7 @@ import Swal from "sweetalert2";
 
 import "./Favorites.css";
 
-const API_URL = "https://weddingbloomai-production.up.railway.app/api";
+const API_URL = "https://weddingbloom-production-b2a2.up.railway.app/api";
 
 function Favorites() {
   const [search, setSearch] = useState("");

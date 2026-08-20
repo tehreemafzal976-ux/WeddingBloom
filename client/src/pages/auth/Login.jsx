@@ -41,8 +41,8 @@ function Login() {
       setLoading(true);
       setError("");
 
-      const primaryUrl = (import.meta.env.VITE_API_URL || "http://localhost:5000/api") + "/auth/login";
-      const fallbackUrl = "https://weddingbloomai-production.up.railway.app/api/auth/login";
+      const primaryUrl = (import.meta.env.VITE_API_URL || "https://weddingbloom-production-b2a2.up.railway.app/api") + "/auth/login";
+      const fallbackUrl = "https://weddingbloom-production-b2a2.up.railway.app/api/auth/login";
 
       let response;
       try {

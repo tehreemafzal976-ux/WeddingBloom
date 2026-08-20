@@ -42,7 +42,7 @@ function Dashboard() {
 
   const fetchWeddings = async () => {
     const response = await fetch(
-      "https://weddingbloomai-production.up.railway.app/api/weddings/my",
+      "https://weddingbloom-production-b2a2.up.railway.app/api/weddings/my",
       {
         method: "GET",
         headers: {
@@ -69,7 +69,7 @@ function Dashboard() {
 
   const fetchEvents = async (weddingId) => {
     const response = await fetch(
-      `https://weddingbloomai-production.up.railway.app/api/events/wedding/${weddingId}`,
+      `https://weddingbloom-production-b2a2.up.railway.app/api/events/wedding/${weddingId}`,
       {
         method: "GET",
         headers: {
@@ -96,7 +96,7 @@ function Dashboard() {
 
   const fetchExpenses = async (weddingId) => {
     const response = await fetch(
-      `https://weddingbloomai-production.up.railway.app/api/expenses/wedding/${weddingId}`,
+      `https://weddingbloom-production-b2a2.up.railway.app/api/expenses/wedding/${weddingId}`,
       {
         method: "GET",
         headers: {

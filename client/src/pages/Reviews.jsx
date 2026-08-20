@@ -52,7 +52,7 @@ function Reviews() {
       setLoading(true);
 
       const response = await fetch(
-        "https://weddingbloomai-production.up.railway.app/api/reviews",
+        "https://weddingbloom-production-b2a2.up.railway.app/api/reviews",
         {
           method: "GET",
           headers: {
@@ -91,7 +91,7 @@ function Reviews() {
   const fetchVendors = async () => {
     try {
       const response = await fetch(
-        "https://weddingbloomai-production.up.railway.app/api/vendors",
+        "https://weddingbloom-production-b2a2.up.railway.app/api/vendors",
         {
           method: "GET",
           headers: {
@@ -197,7 +197,7 @@ function Reviews() {
       };
 
       const response = await fetch(
-        "https://weddingbloomai-production.up.railway.app/api/reviews",
+        "https://weddingbloom-production-b2a2.up.railway.app/api/reviews",
         {
           method: "POST",
 
@@ -263,7 +263,7 @@ function Reviews() {
 
     try {
       const response = await fetch(
-        `http://https://weddingbloomai-production.up.railway.app/api/reviews/${id}`,
+        `https://weddingbloom-production-b2a2.up.railway.app/api/reviews/${id}`,
         {
           method: "DELETE",
 

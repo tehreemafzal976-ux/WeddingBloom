@@ -122,7 +122,7 @@ function Vendors() {
     }
 
     const response = await fetch(
-      "https://weddingbloomai-production.up.railway.app/api/vendors",
+      "https://weddingbloom-production-b2a2.up.railway.app/api/vendors",
       {
         method: "GET",
         headers: {
@@ -147,7 +147,7 @@ function Vendors() {
       vendorList.map(async (vendor) => {
         try {
           const categoryResponse = await fetch(
-            `https://weddingbloomai-production.up.railway.app/api/vendor-categories/${vendor.id}`,
+            `https://weddingbloom-production-b2a2.up.railway.app/api/vendor-categories/${vendor.id}`,
             {
               method: "GET",
               headers: {
@@ -336,7 +336,7 @@ function Vendors() {
     try {
 
       const response = await fetch(
-        `https://weddingbloomai-production.up.railway.app/api/vendor-categories/${vendorId}`,
+        `https://weddingbloom-production-b2a2.up.railway.app/api/vendor-categories/${vendorId}`,
         {
           method: "POST",
 
@@ -381,7 +381,7 @@ function Vendors() {
   const handleFavorite = async (vendorId) => {
   try {
     const response = await fetch(
-      "https://weddingbloomai-production.up.railway.app/api/favorites",
+      "https://weddingbloom-production-b2a2.up.railway.app/api/favorites",
       {
         method: "POST",
         headers: {
@@ -473,7 +473,7 @@ function Vendors() {
 
         const response =
           await fetch(
-            `https://weddingbloomai-production.up.railway.app/api/vendors/${editingVendor.id}`,
+            `https://weddingbloom-production-b2a2.up.railway.app/api/vendors/${editingVendor.id}`,
             {
               method: "PUT",
 
@@ -531,7 +531,7 @@ function Vendors() {
 
         const response =
           await fetch(
-           "https://weddingbloomai-production.up.railway.app/api/vendors",
+           "https://weddingbloom-production-b2a2.up.railway.app/api/vendors",
             {
               method: "POST",
 
@@ -669,7 +669,7 @@ function Vendors() {
 
       const response =
         await fetch(
-          `https://weddingbloomai-production.up.railway.app/api/vendors/${id}`,
+          `https://weddingbloom-production-b2a2.up.railway.app/api/vendors/${id}`,
           {
             method: "DELETE",
 

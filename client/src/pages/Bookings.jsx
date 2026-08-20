@@ -12,7 +12,7 @@ import {
 import Swal from "sweetalert2";
 import "./Bookings.css";
 
-const API_URL = "https://weddingbloomai-production.up.railway.app/api";
+const API_URL = "https://weddingbloom-production-b2a2.up.railway.app/api";
 
 function Bookings() {
   const [showForm, setShowForm] = useState(false);
