@@ -26,27 +26,15 @@ const favoriteRoutes = require("./routes/favoriteRoutes");
 const notificationRoutes = require("./routes/notificationRoutes");
 const settingsRoutes = require("./routes/settingsRoutes");
 const aiRoutes = require("./routes/aiRoutes");
+const productRoutes = require("./routes/productRoutes");
+const cartRoutes = require("./routes/cartRoutes");
+const orderRoutes = require("./routes/orderRoutes");
+const seedRoutes = require("./routes/seedRoutes");
 
 
 const app = express();
-const allowedOrigins = [
-  "http://localhost:5173",
-  "https://wedding-bloom-ai.vercel.app",
-];
 
-app.use(
-  cors({
-    origin: function (origin, callback) {
-      if (!origin || allowedOrigins.includes(origin)) {
-        callback(null, true);
-      } else {
-        callback(new Error("Not allowed by CORS"));
-      }
-    },
-    methods: ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
-    allowedHeaders: ["Content-Type", "Authorization"],
-  })
-);
+app.use(cors());
 
 app.use(express.json());
 
@@ -76,11 +64,15 @@ app.use("/api/favorites", favoriteRoutes);
 app.use("/api/notifications", notificationRoutes);
 app.use("/api/settings", settingsRoutes);
 app.use("/api/ai", aiRoutes);
+app.use("/api/products", productRoutes);
+app.use("/api/cart", cartRoutes);
+app.use("/api/orders", orderRoutes);
+app.use("/api/seed", seedRoutes);
 
 app.get("/", (req, res) => {
   res.json({
     success: true,
-    message: "Wedding Expense Manager Backend is Running!",
+    message: "Wedding Bloom Backend is Running!",
   });
 });
 

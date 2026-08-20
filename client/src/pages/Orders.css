@@ -1,0 +1,268 @@
+.orders-page {
+  padding: 2rem 0;
+}
+
+.orders-header {
+  margin-bottom: 2rem;
+}
+
+.orders-header h1 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 2rem;
+  color: #0f172a;
+}
+
+.orders-header p {
+  color: #64748b;
+  font-size: 0.95rem;
+}
+
+.orders-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.order-card {
+  background: #ffffff;
+  border-radius: 18px;
+  border: 1px solid #e2e8f0;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+}
+
+.order-card-header {
+  padding: 1.25rem 1.5rem;
+  background: #f8fafc;
+  border-bottom: 1px solid #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.order-number-box {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.box-icon {
+  font-size: 1.5rem;
+  color: #e11d48;
+}
+
+.order-number-box strong {
+  display: block;
+  font-size: 1rem;
+  color: #0f172a;
+}
+
+.order-number-box span {
+  font-size: 0.8rem;
+  color: #64748b;
+}
+
+.order-badges {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.status-badge {
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.25rem 0.65rem;
+  border-radius: 20px;
+}
+
+.status-badge.paid {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.status-badge.processing {
+  background: #e0f2fe;
+  color: #0369a1;
+}
+
+.order-card-body {
+  padding: 1.5rem;
+}
+
+.order-items-preview-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  margin-bottom: 1.25rem;
+}
+
+.order-item-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.order-item-row img {
+  width: 55px;
+  height: 55px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.order-item-details {
+  flex: 1;
+}
+
+.order-item-details strong {
+  display: block;
+  font-size: 0.95rem;
+  color: #0f172a;
+}
+
+.order-item-details span {
+  font-size: 0.8rem;
+  color: #64748b;
+}
+
+.order-item-total {
+  font-weight: 700;
+  color: #e11d48;
+  font-size: 0.95rem;
+}
+
+.order-shipping-info {
+  background: #f8fafc;
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  font-size: 0.85rem;
+  color: #475569;
+}
+
+.order-shipping-info small {
+  color: #94a3b8;
+  display: block;
+  font-weight: 600;
+}
+
+.order-card-footer {
+  padding: 1.25rem 1.5rem;
+  background: #ffffff;
+  border-top: 1px solid #f1f5f9;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.order-final-total span {
+  font-size: 0.85rem;
+  color: #64748b;
+  margin-right: 0.5rem;
+}
+
+.order-final-total strong {
+  font-size: 1.2rem;
+  color: #e11d48;
+}
+
+.view-order-btn {
+  background: #f1f5f9;
+  color: #334155;
+  border: 1px solid #cbd5e1;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.orders-empty-state {
+  text-align: center;
+  padding: 5rem 2rem;
+  background: #ffffff;
+  border-radius: 20px;
+  border: 1px dashed #cbd5e1;
+}
+
+.empty-box-icon {
+  font-size: 3.5rem;
+  color: #cbd5e1;
+  margin-bottom: 1rem;
+}
+
+.order-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(15, 23, 42, 0.75);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.order-modal-card {
+  background: #ffffff;
+  border-radius: 20px;
+  max-width: 550px;
+  width: 100%;
+  padding: 2rem;
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.modal-header h2 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.35rem;
+}
+
+.modal-header button {
+  background: #f1f5f9;
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  background: #f8fafc;
+  padding: 1rem;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+  font-size: 0.88rem;
+}
+
+.modal-items-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.modal-item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+}
+
+.modal-total-line {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.25rem;
+  font-weight: 700;
+  border-top: 1px solid #e2e8f0;
+  padding-top: 1rem;
+}

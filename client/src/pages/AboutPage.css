@@ -1,0 +1,81 @@
+.about-page {
+  min-height: 100vh;
+  background: #f8fafc;
+}
+
+.about-hero {
+  background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+  color: #ffffff;
+  padding: 5rem 1.5rem;
+  text-align: center;
+}
+
+.about-hero-container {
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+.about-tag {
+  color: #fecdd3;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+.about-hero h1 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 2.75rem;
+  margin: 0.5rem 0 1rem;
+}
+
+.about-hero p {
+  color: #cbd5e1;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.about-body {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.about-card {
+  background: #ffffff;
+  border-radius: 20px;
+  border: 1px solid #e2e8f0;
+  padding: 2.5rem 2rem;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+}
+
+.about-icon {
+  font-size: 2.5rem;
+  color: #e11d48;
+  margin-bottom: 1.25rem;
+}
+
+.about-card h2 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.35rem;
+  color: #0f172a;
+  margin-bottom: 0.75rem;
+}
+
+.about-card p {
+  color: #64748b;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+}

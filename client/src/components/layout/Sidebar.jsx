@@ -47,8 +47,14 @@ function Sidebar({ isOpen, onClose }) {
 
       items: [
         {
-          name: "Dashboard",
+          name: "Marketplace Home",
           path: "/",
+          icon: <FaHome />,
+        },
+
+        {
+          name: "Dashboard",
+          path: "/dashboard",
           icon: <FaHome />,
         },
 
@@ -56,6 +62,30 @@ function Sidebar({ isOpen, onClose }) {
           name: "Weddings",
           path: "/weddings",
           icon: <FaHeart />,
+        },
+      ],
+    },
+
+    {
+      title: "E-Commerce",
+
+      items: [
+        {
+          name: "Shop Products",
+          path: "/products",
+          icon: <FaBoxOpen />,
+        },
+
+        {
+          name: "My Orders",
+          path: "/orders",
+          icon: <FaClipboardCheck />,
+        },
+
+        {
+          name: "Vendor Products",
+          path: "/vendor/products",
+          icon: <FaStore />,
         },
       ],
     },
@@ -85,7 +115,7 @@ function Sidebar({ isOpen, onClose }) {
     },
 
     {
-      title: "Vendors",
+      title: "Vendors & Packages",
 
       items: [
         {
@@ -109,7 +139,7 @@ function Sidebar({ isOpen, onClose }) {
     },
 
     {
-      title: "Bookings",
+      title: "Bookings & Account",
 
       items: [
         {
@@ -135,13 +165,7 @@ function Sidebar({ isOpen, onClose }) {
           path: "/favorites",
           icon: <FaHeart />,
         },
-      ],
-    },
 
-    {
-      title: "Account",
-
-      items: [
         {
           name: "Notifications",
           path: "/notifications",
@@ -181,9 +205,8 @@ function Sidebar({ isOpen, onClose }) {
       ========================================= */}
 
       <aside
-        className={`sidebar ${
-          isOpen ? "open" : ""
-        }`}
+        className={`sidebar ${isOpen ? "open" : ""
+          }`}
       >
 
         {/* =========================================
@@ -240,8 +263,7 @@ function Sidebar({ isOpen, onClose }) {
                   to={item.path}
                   onClick={onClose}
                   className={({ isActive }) =>
-                    `sidebar-link ${
-                      isActive ? "active" : ""
+                    `sidebar-link ${isActive ? "active" : ""
                     }`
                   }
                 >

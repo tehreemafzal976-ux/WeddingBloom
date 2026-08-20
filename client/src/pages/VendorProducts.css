@@ -1,0 +1,218 @@
+.vendor-products-page {
+  padding: 2rem 0;
+}
+
+.vp-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.vp-header h1 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 2rem;
+  color: #0f172a;
+}
+
+.vp-header p {
+  color: #64748b;
+  font-size: 0.95rem;
+}
+
+.add-prod-btn {
+  background: #e11d48;
+  color: #ffffff;
+  border: none;
+  padding: 0.75rem 1.25rem;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.vp-products-table-wrapper {
+  background: #ffffff;
+  border-radius: 16px;
+  border: 1px solid #e2e8f0;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+}
+
+.vp-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.vp-table th,
+.vp-table td {
+  padding: 1rem 1.25rem;
+  text-align: left;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.vp-table th {
+  background: #f8fafc;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  color: #64748b;
+}
+
+.table-product-cell {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.table-product-cell img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.table-product-cell strong {
+  display: block;
+  font-size: 0.95rem;
+  color: #0f172a;
+}
+
+.table-product-cell small {
+  color: #64748b;
+  font-size: 0.8rem;
+}
+
+.cat-badge {
+  background: #fff0f5;
+  color: #e11d48;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.2rem 0.6rem;
+  border-radius: 6px;
+}
+
+.price-td {
+  font-weight: 700;
+  color: #e11d48;
+}
+
+.old-price-td {
+  color: #94a3b8;
+  text-decoration: line-through;
+  font-size: 0.88rem;
+}
+
+.table-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.edit-btn,
+.del-btn {
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.edit-btn {
+  background: #f1f5f9;
+  color: #334155;
+}
+
+.del-btn {
+  background: #fef2f2;
+  color: #ef4444;
+}
+
+.vp-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(15, 23, 42, 0.75);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.vp-modal-card {
+  background: #ffffff;
+  border-radius: 20px;
+  max-width: 550px;
+  width: 100%;
+  padding: 2rem;
+}
+
+.vp-modal-card h2 {
+  font-family: 'Playfair Display', Georgia, serif;
+  margin-bottom: 1.5rem;
+}
+
+.vp-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.vp-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.vp-field label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #334155;
+  margin-bottom: 0.35rem;
+}
+
+.vp-field input,
+.vp-field select,
+.vp-field textarea {
+  padding: 0.65rem 0.85rem;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  font-size: 0.9rem;
+}
+
+.vp-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.vp-modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.cancel-btn {
+  background: #f1f5f9;
+  color: #334155;
+  border: none;
+  padding: 0.65rem 1.25rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.save-btn {
+  background: #e11d48;
+  color: #ffffff;
+  border: none;
+  padding: 0.65rem 1.25rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}

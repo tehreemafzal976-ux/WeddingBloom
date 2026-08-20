@@ -107,36 +107,37 @@ function Register() {
       setLoading(true);
       setError("");
 
-      const response = await fetch(
-        "https://weddingbloomai-production.up.railway.app/api/auth/register",
-        {
+      const payload = {
+        full_name: formData.full_name,
+        email: formData.email,
+        password: formData.password,
+        role: formData.role,
+        phone: formData.phone,
+        business_name: formData.business_name,
+        category_id: formData.category_id,
+        address: formData.address,
+        city: formData.city,
+        experience_years: formData.experience_years ? Number(formData.experience_years) : 0,
+        description: formData.description,
+      };
+
+      const primaryUrl = (import.meta.env.VITE_API_URL || "http://localhost:5000/api") + "/auth/register";
+      const fallbackUrl = "https://weddingbloomai-production.up.railway.app/api/auth/register";
+
+      let response;
+      try {
+        response = await fetch(primaryUrl, {
           method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            full_name: formData.full_name,
-            email: formData.email,
-            password: formData.password,
-
-            // IMPORTANT
-            role: formData.role,
-
-            phone: formData.phone,
-
-            // Vendor information
-            business_name: formData.business_name,
-            category_id: formData.category_id,
-            address: formData.address,
-            city: formData.city,
-            experience_years:
-              formData.experience_years
-                ? Number(formData.experience_years)
-                : 0,
-            description: formData.description,
-          }),
-        }
-      );
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload),
+        });
+      } catch (e1) {
+        response = await fetch(fallbackUrl, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload),
+        });
+      }
 
       const data = await response.json();
 
