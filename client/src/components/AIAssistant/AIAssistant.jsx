@@ -9,8 +9,7 @@ import {
 
 import "./AIAssistant.css";
 
-const API_URL = "https://weddingbloomai-production.up.railway.app/api";
-
+const API_URL = "https://weddingbloom-production.up.railway.app/api";
 function AIAssistant() {
   const [isOpen, setIsOpen] = useState(false);
   const [message, setMessage] = useState("");
@@ -24,72 +23,72 @@ function AIAssistant() {
     },
   ]);
 
-const handleSend = async () => {
-  const trimmedMessage = message.trim();
+  const handleSend = async () => {
+    const trimmedMessage = message.trim();
 
-  if (!trimmedMessage) {
-    return;
-  }
-
-  const newMessage = {
-    id: Date.now(),
-    sender: "user",
-    text: trimmedMessage,
-  };
-
-  setMessages((previous) => [
-    ...previous,
-    newMessage,
-  ]);
-
-  setMessage("");
-
-  try {
-    const response = await fetch(
-      "https://weddingbloomai-production.up.railway.app/api/ai",
-      {
-        method: "POST",
-
-        headers: {
-          "Content-Type": "application/json",
-        },
-
-        body: JSON.stringify({
-          message: trimmedMessage,
-        }),
-      }
-    );
-
-    const data = await response.json();
-
-    if (!response.ok) {
-      throw new Error(
-        data.message || "AI response failed."
-      );
+    if (!trimmedMessage) {
+      return;
     }
 
-    setMessages((previous) => [
-      ...previous,
-      {
-        id: Date.now() + 1,
-        sender: "ai",
-        text: data.reply,
-      },
-    ]);
-
-  } catch (error) {
-    console.error("AI Assistant Error:", error);
+    const newMessage = {
+      id: Date.now(),
+      sender: "user",
+      text: trimmedMessage,
+    };
 
     setMessages((previous) => [
       ...previous,
-      {
-        id: Date.now() + 1,
-        sender: "ai",
-        text: "Sorry, I couldn't generate a response.",
-      },
+      newMessage,
     ]);
-  }
-};
+
+    setMessage("");
+
+    try {
+      const response = await fetch(
+        "https://weddingbloomai-production.up.railway.app/api/ai",
+        {
+          method: "POST",
+
+          headers: {
+            "Content-Type": "application/json",
+          },
+
+          body: JSON.stringify({
+            message: trimmedMessage,
+          }),
+        }
+      );
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(
+          data.message || "AI response failed."
+        );
+      }
+
+      setMessages((previous) => [
+        ...previous,
+        {
+          id: Date.now() + 1,
+          sender: "ai",
+          text: data.reply,
+        },
+      ]);
+
+    } catch (error) {
+      console.error("AI Assistant Error:", error);
+
+      setMessages((previous) => [
+        ...previous,
+        {
+          id: Date.now() + 1,
+          sender: "ai",
+          text: "Sorry, I couldn't generate a response.",
+        },
+      ]);
+    }
+  };
   const handleKeyDown = (event) => {
     if (event.key === "Enter" && !loading) {
       handleSend();
@@ -163,11 +162,10 @@ const handleSend = async () => {
             {messages.map((item) => (
               <div
                 key={item.id}
-                className={`ai-message-row ${
-                  item.sender === "user"
+                className={`ai-message-row ${item.sender === "user"
                     ? "user-message"
                     : "assistant-message"
-                }`}
+                  }`}
               >
 
                 {item.sender === "ai" && (
@@ -176,15 +174,15 @@ const handleSend = async () => {
                   </div>
                 )}
 
-               <div className="ai-message-bubble">
-  {item.sender === "ai" ? (
-    <ReactMarkdown>
-      {item.text.replace(/\\\|/g, "|")}
-    </ReactMarkdown>
-  ) : (
-    item.text
-  )}
-</div>
+                <div className="ai-message-bubble">
+                  {item.sender === "ai" ? (
+                    <ReactMarkdown>
+                      {item.text.replace(/\\\|/g, "|")}
+                    </ReactMarkdown>
+                  ) : (
+                    item.text
+                  )}
+                </div>
               </div>
             ))}
 
