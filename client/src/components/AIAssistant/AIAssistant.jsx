@@ -9,7 +9,7 @@ import {
 
 import "./AIAssistant.css";
 
-const API_URL = "https://weddingbloom-production.up.railway.app/api";
+const API_URL = "https://weddingbloom-production-b2a2.up.railway.app/api";
 function AIAssistant() {
   const [isOpen, setIsOpen] = useState(false);
   const [message, setMessage] = useState("");
@@ -163,8 +163,8 @@ function AIAssistant() {
               <div
                 key={item.id}
                 className={`ai-message-row ${item.sender === "user"
-                    ? "user-message"
-                    : "assistant-message"
+                  ? "user-message"
+                  : "assistant-message"
                   }`}
               >
 
